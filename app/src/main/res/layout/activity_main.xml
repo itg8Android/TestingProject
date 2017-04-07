@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.itg.testingproject.MainActivity">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:contentPadding="@dimen/cardview_margin"
+        android:layout_margin="@dimen/cardview_margin"
+        app:cardBackgroundColor="#ED1B24"
+        android:id="@+id/card">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OTP LOGIN"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/textview_margin"
+                android:textColor="@android:color/white"
+                android:text="Please provide your valid mobile number. We will give you an OTP for further processing"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/white"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColorHighlight="@android:color/white"
+                    android:textColorLink="@android:color/white"
+                    android:text="+91"
+                    android:layout_marginLeft="16dp"
+                    android:backgroundTint="@android:color/white"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:paddingLeft="5dp"
+                    android:layout_marginLeft="16dp"
+                    android:textColorHighlight="@android:color/white"
+                    android:textColorLink="@android:color/white"
+                    android:textColorHint="@android:color/white"
+                    android:hint="Enter Number"
+                    android:layout_weight="0.2"
+                    android:textSize="14sp"
+                    android:backgroundTint="@android:color/white"/>
+                <ImageView
+                    android:id="@+id/imageEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_edit_white_24dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_otp_recceived"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/white"
+                    android:text="OTP"
+                />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:ellipsize="middle"
+                    android:backgroundTint="@android:color/white"
+                    android:layout_gravity="center"
+                    android:maxLength="6"
+                    android:textColorHint="@android:color/white"
+                    android:hint="Enter OTP"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <FrameLayout
+        android:id="@+id/btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/lbl_send_verify"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@android:color/white"
+            android:text="SEND"
+            android:layout_gravity="center"
+            android:elevation="7dp"/>
+        
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            app:backgroundTint="#ED1B24"
+            android:layout_margin="16dp"/>
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>

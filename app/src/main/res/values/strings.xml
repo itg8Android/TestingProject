@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TestingProject</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_checkout">Checkout</string>
+    <string name="title_activity_sleep">Testing project</string>
+    <string name="title_activity_floating_test">Test project</string>
+</resources>
